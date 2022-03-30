@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: produto-microservice
+server:
+  port: 9092
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8083/eureka

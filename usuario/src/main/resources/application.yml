@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: carrinho-microservice
+server:
+  port: 9091
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8083/eureka

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: compra-microservice
+server:
+  port: 9093
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8083/eureka
