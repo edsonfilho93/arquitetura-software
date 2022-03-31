@@ -1,6 +1,6 @@
 spring:
   application:
-    name: carrinho-microservice
+    name: usuario-microservice
 server:
   port: 9091
 eureka:

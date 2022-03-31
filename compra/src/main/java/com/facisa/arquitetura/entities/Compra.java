@@ -3,25 +3,43 @@ package com.facisa.arquitetura.entities;
 import io.swagger.annotations.ApiModelProperty;
 
 public class Compra {
-    @ApiModelProperty(value = "Código de compra")
-    private long id;
 
-    @ApiModelProperty(value = "Nome do cliente")
-    private String nomeCliente;
+	public Compra(int id, int idCliente, int idProduto) {
+		this.id = id;
+		this.idCliente = idCliente;
+		this.idProduto = idProduto;
+	}
 
-    public long getId() {
-        return id;
-    }
+	@ApiModelProperty(value = "Código de compra")
+	private int id;
 
-    public String getNomeCliente() {
-        return nomeCliente;
-    }
+	@ApiModelProperty(value = "id do cliente")
+	private int idCliente;
 
-    public void setNomeCliente(String nome) {
-        this.nomeCliente = nome;
-    }
+	@ApiModelProperty(value = "id do produto")
+	private int idProduto;
 
-    public void setId(long id) {
-        this.id = id;
-    }
+	public long getId() {
+		return id;
+	}
+
+	public int getIdCliente() {
+		return idCliente;
+	}
+
+	public void setIdCliente(int idCliente) {
+		this.idCliente = idCliente;
+	}
+
+	public int getIdProduto() {
+		return idProduto;
+	}
+
+	public void setIdProduto(int idProduto) {
+		this.idProduto = idProduto;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 }

@@ -3,25 +3,32 @@ package com.facisa.arquitetura.entities;
 import io.swagger.annotations.ApiModelProperty;
 
 public class Usuario {
-    @ApiModelProperty(value = "Código dao usuario")
-    private long id;
 
-    @ApiModelProperty(value = "Nome da usuario")
-    private String nome;
+	public Usuario(int id, String nome) {
+		super();
+		this.id = id;
+		this.nome = nome;
+	}
 
-    public long getId() {
-        return id;
-    }
+	@ApiModelProperty(value = "Código dao usuario")
+	private int id;
 
-    public String getNome() {
-        return nome;
-    }
+	@ApiModelProperty(value = "Nome da usuario")
+	private String nome;
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+	public long getId() {
+		return id;
+	}
 
-    public void setId(long id) {
-        this.id = id;
-    }
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 }
