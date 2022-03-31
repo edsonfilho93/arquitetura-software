@@ -1,0 +1,26 @@
+server:
+  port: 8080
+ 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8083/eureka 
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+      - id: compraMicroservice
+        uri: lb://compra-microservice
+        predicates:
+        - Path=/compra/**
+      - id: usuarioModule
+        uri: lb://usuario-microservice
+        predicates:
+        - Path=/usuario/**
+      - id: produtoMicroservice
+        uri: lb://produto-microservice
+        predicates:
+        - Path=/produto/**   
